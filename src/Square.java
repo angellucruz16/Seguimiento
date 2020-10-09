@@ -14,28 +14,32 @@ public class Square extends Shapes {
 		Sketch.stroke(0);
 		Sketch.rect (posX, posY, width , height );
 		
-		rotateSquare (numSquare);
 		
 		if (width - 2 > 2) {
 			
-			renderShapes(posX-1, posY-1, width-2, height-2, numSquare +1);
+			renderShapes(posX-1, posY-1, width-2, height-2, numSquare+1);
 			 
 		
 		}  
 		
 	}//RS
 	
-	@Override 
-	public void rotateSquare ( int numSquare) {
+	
+	//ESTE METODO ROTA LOS CUADRADOS PARES = IZQUIERDA
+	  //IMPARES= DERECHA
+	 
+	public void rotateSquare (int numSquare) {
 		
 		if (numSquare %2 == 0) {
 			
-			
-			
-		} //ROTATEPAR
+		Sketch.translate (width/2, height/2);
+		Sketch.rotate((float) ((15/180)*3.1415));
 		
-		else if (numSquare %2 ==1)
-			
+		} //ROTATE PAR
+		
+		else if (numSquare %2 ==1) {
+			Sketch.translate (width/2, height/2);
+			Sketch.rotate((float) ((345/180)*3.1415));
 			
 		} //ROTATE IMPAR
 	

@@ -15,7 +15,7 @@ int posY;
 	} // MAIN
 
 	public void settings () {
-		size (800,800);
+		size (600,600);
 		state = 2;
 		posX = width /2;
 		posY = height /2;
@@ -33,12 +33,14 @@ int posY;
 	
 	
 	public void draw () {
+		
 		rectMode (CENTER);
 		switch (state) {
 		case 0:
+			
 			background (255);
-			Square s = new Square(posX, posY, 0.1, this, width /3, height /3 );
-			s.renderShapes(posX, posY, width, height);
+			Square s = new Square(posX, posY, 0.1, this, width/20, height/20 );
+			s.renderShapes(posX, posY, width, height,1);
 			break;
 
 		case 1:
@@ -58,8 +60,20 @@ rectMode (CORNER);
 		
 		
 		fill (0);
-		text ("Cuadrados",65,51);
-		text ("Círculos",65,100);
+		text ("CUADRADO",65,51);
+		text ("CÍRCULO",65,100);
+		
+rectMode (CORNER);
+
+		fill(188,223,243);
+		rect (20,450,150,30);
+		rect (20,500,150,30);
+	
+		
+		
+		fill (0);
+		text ("ZOOM IN",65,470);
+		text ("ZOOM OUT",65,520);
 		
 	}//DRAW
 	public void mousePressed () {
@@ -72,7 +86,32 @@ rectMode (CORNER);
 			&& mouseY >80 && mouseY < 80 + 30 )	
 		state = 1;
 		
+		// ZOOM IN - ZOOM OUT
+		
+		if (mouseX> 20 && mouseX < 20+150 // ZOOMIN
+				&& mouseY > 450 && mouseY < 450+30);
+		
+		if (mouseX > 20 && mouseX < 20 +150
+				&& mouseY > 500 && mouseY < 500 +30); //ZOOMOUT
+		
 	}	//MP
 		
+	public void zoomIn () {
+		
+		int w = width*2; 
+		int h = height *2; //DIMENSIONES PARA NUEVA ESCALA
+		Square s = new Square(posX, posY, 0.1, this, w/20, h/20 );
+		s.renderShapes(posX, posY, w, height,1);
+		
+	} //ZOOMIN
+	
+	public void zoomOut (){
+		
+		int w = width/2; 
+		int h = height /2; //DIMENSIONES PARA NUEVA ESCALA
+		Square s = new Square(posX, posY, 0.1, this, w/20, h/20 );
+		s.renderShapes(posX, posY, w, h,1);
+		
+	} //ZOOMOUT
 	
 }

@@ -24,4 +24,14 @@ public class Shapes {
 
 	}//RS
 
+	public void rotateSquare() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void rotateSquare(int numSquare) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
