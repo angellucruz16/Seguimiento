@@ -39,7 +39,7 @@ int posY;
 		case 0:
 			
 			background (255);
-			Square s = new Square(posX, posY, 0.1, this, width/20, height/20 );
+			Square s = new Square(posX, posY, 10, this, width/2, height/2 );
 			s.renderShapes(posX, posY, width, height,1);
 			break;
 

@@ -17,7 +17,7 @@ public class Square extends Shapes {
 		
 		if (width - 2 > 2) {
 			
-			renderShapes(posX-1, posY-1, width-2, height-2, numSquare+1);
+			renderShapes(posX-1, posY-1, width/2, height/2, numSquare+1);
 			 
 		
 		}  
@@ -25,7 +25,7 @@ public class Square extends Shapes {
 	}//RS
 	
 	
-	//ESTE METODO ROTA LOS CUADRADOS PARES = IZQUIERDA
+	//ROTAR LOS CUADRADOS PARES = IZQUIERDA
 	  //IMPARES= DERECHA
 	 
 	public void rotateSquare (int numSquare) {
