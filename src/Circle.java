@@ -19,7 +19,7 @@ public class Circle extends Shapes {
 		if (width - Dist > 2) {
 			
 			renderShapes(Dist,w-Dist, h-Dist);
-			
+			 
 			
 		}  
 		
