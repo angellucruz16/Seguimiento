@@ -11,7 +11,7 @@ public class Square extends Shapes {
 		
 
 		Sketch.noFill();
-		Sketch.stroke(0);
+		Sketch.stroke(1);
 		Sketch.rect (posX, posY, width , height );
 		
 		

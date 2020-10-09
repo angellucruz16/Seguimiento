@@ -24,7 +24,7 @@ int posY;
 	
 
 	public void setup () {
-		background (255);
+		background (0);
 		noStroke();
 		
 		
@@ -53,7 +53,7 @@ int posY;
 		
 rectMode (CORNER);
 		
-		fill(188,223,243);
+		fill(255);
 		rect (20,30,150,30);
 		rect (20,80,150,30);
 	
@@ -65,7 +65,7 @@ rectMode (CORNER);
 		
 rectMode (CORNER);
 
-		fill(188,223,243);
+		fill(255);
 		rect (20,450,150,30);
 		rect (20,500,150,30);
 	

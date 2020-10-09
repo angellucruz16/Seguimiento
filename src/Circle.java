@@ -8,17 +8,17 @@ public class Circle extends Shapes {
 
 	}
 
-	public void renderShapes (int Dist, int w, int h) {
+	public void renderShapes (int posX, int posY, int D) {
 
 
 
 		Sketch.noFill();
-		Sketch.stroke(0);
-		Sketch.ellipse (posX, posY, (int) (w - Dist), (int) (h - Dist));
+		Sketch.stroke(2);
+		Sketch.ellipse (posX,posY,D,D);
 		
-		if (width - Dist > 2) {
+		if (D > 2) {
 			
-			renderShapes(Dist,w-Dist, h-Dist);
+			renderShapes(posX,posY,D-20);
 			 
 			
 		}  
