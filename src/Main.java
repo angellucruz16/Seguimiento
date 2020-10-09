@@ -15,7 +15,7 @@ int posY;
 	} // MAIN
 
 	public void settings () {
-		size (800,700);
+		size (800,800);
 		state = 2;
 		posX = width /2;
 		posY = height /2;
@@ -37,14 +37,14 @@ int posY;
 		switch (state) {
 		case 0:
 			background (255);
-			Square s = new Square(posX, posY, 0.1, this, width /3, width /3 );
-			s.renderShapes();
+			Square s = new Square(posX, posY, 0.1, this, width /3, height /3 );
+			s.renderShapes(posX, posY, width, height);
 			break;
 
 		case 1:
 			
-			Circle c = new Circle(posX, posY, 0.1, this, width /3, width /3 );
-			c.renderShapes(15, width /3, width/3);
+			Circle c = new Circle(posX, posY, 0.1, this, width /3, height /3 );
+			c.renderShapes(15, width /3, height/3);
 			background (255);
 			break;
 		}
